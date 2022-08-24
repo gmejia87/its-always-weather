@@ -2,7 +2,32 @@
     --primary: white;
 }
 
+body {
+    margin: 1%
+}
+
+/* header starts */
 .app-title {
     background-image: linear-gradient(45deg, #4377ef 0%, #322bff 52%, #272a68 90%);
     text-align: center;
 }
+/* header ends */
+
+
+/* search card starts */
+.card {
+    float: left;
+}
+
+.form-input {
+width: 100%;
+}
+/* search card ends */
+
+
+/* current weather starts */
+/* current weather ends */
+
+
+/* future forcast starts */
+/* future forcast ends */
