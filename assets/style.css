@@ -19,15 +19,31 @@ body {
     float: left;
 }
 
-.form-input {
-width: 100%;
+.card-header {
+    text-align: left;
+}
+
+.form-input, .btn {
+    align-items: center;
+    width: 100%;
 }
 /* search card ends */
 
+/* search history starts*/
+.saved.btn {
+    color: #272a68;
+}
+/* search history ends*/
+
 
 /* current weather starts */
+.current-weather {
+    border-color: black;
+    margin: 5px;
+}
 /* current weather ends */
 
 
 /* future forcast starts */
+
 /* future forcast ends */
