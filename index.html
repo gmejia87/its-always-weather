@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/style.css">
     <title>It's Always Weather</title>
 </head>
@@ -14,29 +14,43 @@
         <h1 class="app-title p-3 mb-2 bg-primary text-white">Weather Dashboard</h1>
     </header>
     
-    <main class="flex-row justify-space-between">
-        <!-- left side of page -->
-        <div class="col-4">
-
-            <div class="card">
-                <h2 class="card-header">Search for a City:</h2>
-                <input type="text" name="cityname" id="cityname" class="form-input">
-                <button type="submit" class="btn bg-primary">Search</button>
+    <main>
+        <div class="parent-container d-flex">
+            <!-- left side of page -->
+            <div class="container col-3">
+                <div class="city-search">
+                    <div class="d-print-none"><h2>Search for a City:</h2></div>
+                    <div><input type="text" name="cityname" id="cityname" placeholder="City Name"></div>
+                    <div><button type="submit" class="btn bg-primary" id="create-search">Search</button></div>
+                </div>
                 <!-- search history -->
-                <button class="saved-btn" data-language="saved-cityname"></button>
+                <div class="saved-searches .flex-column">
+                    <div><button type="button" class="btn btn-secondary" id="saved-search" data-target="#save-city"></button></div>
+                    <div><button type="button" class="btn btn-secondary" id="saved-search" data-target="#save-city"></button></div>
+                    <div><button type="button" class="btn btn-secondary" id="saved-search" data-target="#save-city"></button></div>
+                    <div><button type="button" class="btn btn-secondary" id="saved-search" data-target="#save-city"></button></div>
+                    <div><button type="button" class="btn btn-secondary" id="saved-search" data-target="#save-city"></button></div>
+                    <div><button type="button" class="btn btn-secondary" id="saved-search" data-target="#save-city"></button></div>
+                    <div><button type="button" class="btn btn-secondary" id="saved-search" data-target="#save-city"></button></div>
+                    <div><button type="button" class="btn btn-secondary" id="saved-search" data-target="#save-city"></button></div>
+                </div>
             </div>
-        </div>
 
-        <div class="col-8">
             <!-- current search -->
-            <div class="current-weather">
-                <h2>City (date)</h2>
-                <p>temp: wind: humidity: UV Index:</p>
-            </div>
-
-            <!--future section for current search -->
-            <div class="future-forecast">
-                <h3 class="">5-Day Forecast:</h2>
+            <div class="container col-9">
+                <div class="current-weather">
+                    <h2>City (date)</h2>
+                    <p>temp: wind: humidity:</p>
+                </div>
+                <!--future section for current search -->
+                <div class="card-container" id="future-forecast">
+                    <h3>5-Day Forecast:</h2>
+                    <div class="d-flex align-items-stretch" id="days">temp: wind: humidity:</div>
+                    <div class="d-flex align-items-stretch" id="days">temp: wind: humidity:</div>
+                    <div class="d-flex align-items-stretch" id="days">temp: wind: humidity:</div>
+                    <div class="d-flex align-items-stretch" id="days">temp: wind: humidity:</div>
+                    <div class="d-flex align-items-stretch" id="days">temp: wind: humidity:</div>
+                </div>
             </div>
         </div>
     </main>

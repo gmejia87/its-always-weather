@@ -1,49 +1,36 @@
 :root {
-    --primary: white;
+  --primary: white;
 }
 
 body {
-    margin: 1%
+  margin: 1%;
 }
 
 /* header starts */
 .app-title {
-    background-image: linear-gradient(45deg, #4377ef 0%, #322bff 52%, #272a68 90%);
-    text-align: center;
+  background-image: linear-gradient(
+    45deg,
+    #4377ef 0%,
+    #322bff 52%,
+    #272a68 90%
+  );
+  text-align: center;
 }
 /* header ends */
 
+/* city-search starts */
+/* city-sarch ends */
 
-/* search card starts */
-.card {
-    float: left;
+/* saved-searches starts*/
+/* saved-searches ends*/
+
+/* current-weather starts */
+/* current-weather ends */
+
+/* future-forcast starts */
+.card-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
 }
-
-.card-header {
-    text-align: left;
-}
-
-.form-input, .btn {
-    align-items: center;
-    width: 100%;
-}
-/* search card ends */
-
-/* search history starts*/
-.saved.btn {
-    color: #272a68;
-}
-/* search history ends*/
-
-
-/* current weather starts */
-.current-weather {
-    border-color: black;
-    margin: 5px;
-}
-/* current weather ends */
-
-
-/* future forcast starts */
-
-/* future forcast ends */
+/* future-forcast ends */
