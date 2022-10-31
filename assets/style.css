@@ -19,18 +19,20 @@ body {
 /* header ends */
 
 /* city-search starts */
+#search-city {
+  width: 80%;
+}
 /* city-sarch ends */
 
 /* saved-searches starts*/
 /* saved-searches ends*/
 
 /* current-weather starts */
+#current-weather {
+  padding-left: 15px;
+}
 /* current-weather ends */
 
 /* future-forcast starts */
-.card-container {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-}
+
 /* future-forcast ends */

@@ -1,60 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <!-- style sheet -->
+    <link rel="stylesheet" href="./assets/style.css" />
+    <!-- title -->
     <title>It's Always Weather</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1 class="app-title p-3 mb-2 bg-primary text-white">Weather Dashboard</h1>
+      <h1 class="app-title p-3 mb-2 bg-primary text-white">
+        Weather Dashboard
+      </h1>
     </header>
-    
+
     <main>
-        <div class="parent-container d-flex">
-            <!-- left side of page -->
-            <div class="container col-3">
-                <div class="city-search">
-                    <div class="d-print-none"><h2>Search for a City:</h2></div>
-                    <div><input type="text" name="cityname" id="cityname" placeholder="City Name"></div>
-                    <div><button type="submit" class="btn bg-primary" id="create-search">Search</button></div>
-                </div>
-                <!-- search history -->
-                <div class="saved-searches .flex-column">
-                    <div><button type="button" class="btn btn-secondary" id="saved-search" data-target="#save-city"></button></div>
-                    <div><button type="button" class="btn btn-secondary" id="saved-search" data-target="#save-city"></button></div>
-                    <div><button type="button" class="btn btn-secondary" id="saved-search" data-target="#save-city"></button></div>
-                    <div><button type="button" class="btn btn-secondary" id="saved-search" data-target="#save-city"></button></div>
-                    <div><button type="button" class="btn btn-secondary" id="saved-search" data-target="#save-city"></button></div>
-                    <div><button type="button" class="btn btn-secondary" id="saved-search" data-target="#save-city"></button></div>
-                    <div><button type="button" class="btn btn-secondary" id="saved-search" data-target="#save-city"></button></div>
-                    <div><button type="button" class="btn btn-secondary" id="saved-search" data-target="#save-city"></button></div>
-                </div>
-            </div>
+      <!-- main container -->
+      <div id="content" class="container">
+        <div class="row">
+          <!-- left side of page with city search box and saved searches -->
+          <div id="content-left" class="col-md-3">
+            <form>
+              <label for="search-city">Search for a City:</label>
+              <div class="form-row">
+                <input
+                  id="search-city"
+                  class="form-control"
+                  name="city"
+                  value="Sacramento"
+                />
+                <button
+                  id="search-button"
+                  class="btn btn-primary"
+                  type="submit"
+                >
+                  Search
+                </button>
+              </div>
+            </form>
+            <div id="search-error"></div>
+            <!-- saved city searches -->
+            <ul id="city-results" class="list-group mt-4"></ul>
+          </div>
 
-            <!-- current search -->
-            <div class="container col-9">
-                <div class="current-weather">
-                    <h2>City (date)</h2>
-                    <p>temp: wind: humidity:</p>
-                </div>
-                <!--future section for current search -->
-                <div class="card-container" id="future-forecast">
-                    <h3>5-Day Forecast:</h2>
-                    <div class="d-flex align-items-stretch" id="days">temp: wind: humidity:</div>
-                    <div class="d-flex align-items-stretch" id="days">temp: wind: humidity:</div>
-                    <div class="d-flex align-items-stretch" id="days">temp: wind: humidity:</div>
-                    <div class="d-flex align-items-stretch" id="days">temp: wind: humidity:</div>
-                    <div class="d-flex align-items-stretch" id="days">temp: wind: humidity:</div>
-                </div>
-            </div>
+          <!-- Right side content showing current weather and five day forecast -->
+          <div id="content-right" class="col-md-9 pt-4">
+            <!-- Current weather displayed on top -->
+            <div id="current-weather" class="border rounded"></div>
+            <!-- Five day forecast displayed on bottom -->
+            <div id="five-day-forecast" class="mt-5"></div>
+          </div>
         </div>
+      </div>
     </main>
-
-</body>
-
+    <!-- add script here -->
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
